@@ -22,7 +22,7 @@ public class EmployeService {
         return (int) ChronoUnit.YEARS.between(entryDate, currentDate);
     }
 
-    public static double calculPrime(Employe employe) {
+    public double calculPrime(Employe employe) {
 
         double salaire = employe.getSalary();
         int ancienneté = calculAnciennete(employe);
@@ -37,7 +37,7 @@ public class EmployeService {
         return prime;
     }
 
-    public static double calculMasseSalariale(List<Employe> employes) {
+    public double calculMasseSalariale(List<Employe> employes) {
 
         double masseSalariale = 0;
 

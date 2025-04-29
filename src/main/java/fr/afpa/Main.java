@@ -2,8 +2,10 @@ package fr.afpa;
 
 import fr.afpa.constants.ModeRestauration;
 import fr.afpa.models.Agence;
+import fr.afpa.models.Directeur;
 import fr.afpa.models.Employe;
 import fr.afpa.models.Enfant;
+import fr.afpa.services.DirecteurService;
 import fr.afpa.services.EmployeService;
 
 import java.time.LocalDate;
@@ -86,6 +88,13 @@ public class Main {
         employes.add(emp4);
         employes.add(emp5);
 
+        Directeur dir = new Directeur();
+        dir.setName("Dupont");
+        dir.setFirstname("Michel");
+        dir.setEntryDate(LocalDate.of(2015, 9, 10));
+        dir.setSalary(10000);
+
+
         //System.out.println(employes.size());
 
         //employes.sort(Comparator
@@ -106,7 +115,9 @@ public class Main {
 
         //EmployeService.checkChequeVacances(emp1);
 
-        EmployeService.checkChequeNoel(emp1);
+        //EmployeService.checkChequeNoel(emp1);
+
+        System.out.println(DirecteurService.calculPrime(dir));
     }
 
 
