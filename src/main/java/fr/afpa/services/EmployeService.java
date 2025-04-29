@@ -10,6 +10,11 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
 
+// ✅ Bon travail
+// Pour moi, ce n'est pas à Employe de calculer la masse salariale d'une liste d'employés
+// A faire plutôt dans le main ou dans Agence
+// Pourquoi certaine méthode static et d'autres pas ?
+
 public class EmployeService {
 
     public static int calculAnciennete(Employe employe) {
@@ -29,11 +34,12 @@ public class EmployeService {
         double prime = (salaire * 5 / 100) + ((salaire * 2 / 100) * ancienneté);
         LocalDate today = LocalDate.now();
 
-        //if (today.getMonthValue() == 11 && today.getDayOfMonth() == 30) {
-            //System.out.println("La prime d'un montant de " + prime + " a été versée sur votre compte");
-       // } else {
-            //System.out.println("Votre prime sera versée le 30/11");
-        //}
+        // if (today.getMonthValue() == 11 && today.getDayOfMonth() == 30) {
+        // System.out.println("La prime d'un montant de " + prime + " a été versée sur
+        // votre compte");
+        // } else {
+        // System.out.println("Votre prime sera versée le 30/11");
+        // }
         return prime;
     }
 
@@ -64,8 +70,7 @@ public class EmployeService {
 
         if (EmployeService.calculAnciennete(employe) > 1) {
             System.out.println(nom + " peut bénéficier de chèques vancances.");
-        }
-        else {
+        } else {
             System.out.println(nom + " ne peut pas bénéficier de chèques vancances;");
         }
     }
@@ -89,12 +94,14 @@ public class EmployeService {
 
         if (nbCheques20 + nbCheques30 + nbCheques50 > 0) {
             System.out.println(nom + " a droit aux chèques Noël : OUI");
-            if (nbCheques20 > 0) System.out.println(" - " + nbCheques20 + " chèque(s) de 20€");
-            if (nbCheques30 > 0) System.out.println(" - " + nbCheques30 + " chèque(s) de 30€");
-            if (nbCheques50 > 0) System.out.println(" - " + nbCheques50 + " chèque(s) de 50€");
+            if (nbCheques20 > 0)
+                System.out.println(" - " + nbCheques20 + " chèque(s) de 20€");
+            if (nbCheques30 > 0)
+                System.out.println(" - " + nbCheques30 + " chèque(s) de 30€");
+            if (nbCheques50 > 0)
+                System.out.println(" - " + nbCheques50 + " chèque(s) de 50€");
         } else {
             System.out.println(nom + " a droit aux chèques Noël : NON");
         }
     }
 }
-

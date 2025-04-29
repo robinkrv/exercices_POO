@@ -3,7 +3,9 @@ package fr.afpa.services;
 import fr.afpa.models.Directeur;
 import fr.afpa.models.Employe;
 
-public class DirecteurService extends EmployeService{
+public class DirecteurService extends EmployeService {
+
+    // TODO @Overide la méthode permettant de calculculer la prime
 
     public static double calculPrime(Directeur directeur) {
         double salaire = directeur.getSalary();

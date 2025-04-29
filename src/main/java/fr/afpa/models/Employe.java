@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+// TODO Les méthodes demandées dans le cahier des charges
+
 public class Employe {
 
     private String name;

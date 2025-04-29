@@ -6,11 +6,9 @@ import fr.afpa.models.Directeur;
 import fr.afpa.models.Employe;
 import fr.afpa.models.Enfant;
 import fr.afpa.services.DirecteurService;
-import fr.afpa.services.EmployeService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -33,7 +31,6 @@ public class Main {
         Enfant enfant3 = new Enfant();
         enfant3.setPrénom("Snoop");
         enfant3.setAge(19);
-
 
         Employe emp1 = new Employe();
         emp1.setName("Durand");
@@ -94,31 +91,28 @@ public class Main {
         dir.setEntryDate(LocalDate.of(2015, 9, 10));
         dir.setSalary(10000);
 
+        // System.out.println(employes.size());
 
-        //System.out.println(employes.size());
+        // employes.sort(Comparator
+        // .comparing(Employe::getService)
+        // .thenComparing(Employe::getName)
+        // .thenComparing(Employe::getFirstname));
 
-        //employes.sort(Comparator
-                //.comparing(Employe::getService)
-                //.thenComparing(Employe::getName)
-                //.thenComparing(Employe::getFirstname));
+        // for (Employe e : employes) {
+        // System.out.println(e.getService() + " - " + e.getFirstname() + " " +
+        // e.getName());
+        // }
 
+        // double masseSalariale = EmployeService.calculMasseSalariale(employes);
+        // System.out.println(masseSalariale);
 
-        //for (Employe e : employes) {
-           // System.out.println(e.getService() + " - " + e.getFirstname() + " " + e.getName());
-       // }
+        // EmployeService.checkModeRestauration(emp1);
 
+        // EmployeService.checkChequeVacances(emp1);
 
-        //double masseSalariale = EmployeService.calculMasseSalariale(employes);
-        //System.out.println(masseSalariale);
-
-        //EmployeService.checkModeRestauration(emp1);
-
-        //EmployeService.checkChequeVacances(emp1);
-
-        //EmployeService.checkChequeNoel(emp1);
+        // EmployeService.checkChequeNoel(emp1);
 
         System.out.println(DirecteurService.calculPrime(dir));
     }
-
 
 }
